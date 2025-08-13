@@ -1,0 +1,151 @@
+/* Container */
+.register-container {
+  max-width: 700px;
+  margin: 3rem auto;
+  background-color: #fff;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Headings */
+.register-container h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+/* Form */
+.register-form {
+  width: 100%;
+}
+
+/* Form layout */
+.form-group {
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Labels */
+label {
+  font-weight: 600;
+  font-size: 0.60rem;
+  margin-bottom: 0.4rem;
+}
+
+/* Inputs */
+input,
+textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 0.40rem;
+  background-color: #f9f9f9;
+  transition: border 0.3s ease, background 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #4d7ef5;
+  background-color: #fff;
+  outline: none;
+}
+
+input,:placeholder {
+    font-size: small;
+}
+/* Textarea */
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Button */
+.submit-btn {
+  width: 100%;
+  padding: 0.9rem;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(to right, #4e0da8, #1f65e2);
+}
+
+/* Login link */
+.login-link {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+.login-link a {
+  color: #2575fc;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+  }
+
+  .register-container {
+    padding: 2rem 1.2rem;
+  }
+}
+/* Select Dropdown Styling */
+select {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  background-color: #f9f9f9;
+  font-size: 0.95rem;
+  color: #333;
+  appearance: none;
+  width: 100%;
+  transition: border 0.3s ease, background 0.3s ease;
+}
+
+select:focus {
+  border-color: #4d7ef5;
+  background-color: #fff;
+  outline: none;
+}
+
+/* Optional: Add custom dropdown icon on the right */
+select::-ms-expand {
+  display: none;
+}
+
+select option {
+  background-color: #fff;
+  color: #333;
+}
