@@ -1,4 +1,4 @@
-.services-page {
+.services-page { 
   padding: 40px 0;
   min-height: calc(100vh - 80px);
   background: linear-gradient(135deg, #f5f7fa 0%, #efeff0 100%);
@@ -23,6 +23,7 @@
   margin: 0 auto;
 }
 
+/* Search Bar */
 .search-wrapper {
   display: flex;
   justify-content: center;
@@ -39,27 +40,38 @@
 .search-icon-inside {
   position: absolute;
   top: 50%;
-  left: 16px;
+  left: 12px;
   transform: translateY(-50%);
-  color: #888;
+  color: #777;
+  font-size: 1.2rem;
   pointer-events: none;
-  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .service-search-box {
   width: 100%;
-  padding: 0.8rem 1rem 0.8rem 2.5rem; /* Ensure left padding for icon */
-  padding-left: 2.5rem;
+  padding: 0.85rem 1rem 0.85rem 2.8rem;
   border: 1px solid #ccc;
   border-radius: 12px;
   font-size: 1rem;
   background-color: #fff;
-  z-index: 1;
-  position: relative;
+  line-height: 1.4;
+  transition: all 0.3s ease;
 }
 
+.service-search-box:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 6px rgba(79, 70, 229, 0.4);
+}
 
+.service-search-box::placeholder {
+  color: #aaa;
+}
 
+/* Service Cards */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -96,42 +108,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 1.4rem;
 }
 
-.icon-gray {
-  background-color: #f3f4f6;
-  color: #374151;
-}
-
-.icon-orange {
-  background-color: #ffedd5;
-  color: #c2410c;
-}
-
-.icon-blue {
-  background-color: #dbeafe;
-  color: #1d4ed8;
-}
-
-.icon-teal {
-  background-color: #ccfbf1;
-  color: #0f766e;
-}
-
-.icon-purple {
-  background-color: #ede9fe;
-  color: #6b21a8;
-}
-
-.icon-red {
-  background-color: #fee2e2;
-  color: #b91c1c;
-}
-
-.icon-green {
-  background-color: #d1fae5;
-  color: #065f46;
-}
+.icon-gray { background-color: #f3f4f6; color: #374151; }
+.icon-orange { background-color: #ffedd5; color: #c2410c; }
+.icon-blue { background-color: #dbeafe; color: #1d4ed8; }
+.icon-teal { background-color: #ccfbf1; color: #0f766e; }
+.icon-purple { background-color: #ede9fe; color: #6b21a8; }
+.icon-red { background-color: #fee2e2; color: #b91c1c; }
+.icon-green { background-color: #d1fae5; color: #065f46; }
 
 .service-title {
   font-size: 1.5rem;
@@ -156,61 +142,26 @@
   transform: translateX(8px);
 }
 
-/* Custom Services Box */
-.custom-service-box {
-  margin-top: 4rem;
-  text-align: center;
-}
-
-.custom-service-title {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #222;
-  margin-bottom: 0.5rem;
-}
-
-.custom-service-desc {
-  color: #555;
-  margin-bottom: 1rem;
-}
-
-.contact-button {
-  padding: 10px 24px;
-  background-color: #4f46e5;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-weight: 600;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.contact-button:hover {
-  background-color: #4338ca;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .page-title {
-    font-size: 2.5rem;
-  }
-
-  .services-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  .service-card {
-    padding: 1.5rem;
-  }
-}
+/* Mobile Fix */
 @media (max-width: 480px) {
-  .service-search-box {
-    font-size: 0.9rem;
-    padding: 0.7rem 0.8rem 0.7rem 2.3rem;
+  .search-input-container {
+    max-width: 95%;
+    margin: 0 auto;
   }
+
   .search-icon-inside {
     left: 10px;
+    font-size: 1.1rem;
+  }
+
+  .service-search-box {
+    font-size: 1rem;
+    padding: 0.75rem 1rem 0.75rem 2.5rem;
+  }
+
+  /* Make icon and text perfectly centered even with large placeholder */
+  .service-search-box::placeholder {
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
   }
 }
