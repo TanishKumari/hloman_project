@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom'; // ✅ Added Link
 import './RegistrationPages.css';
 
 const ShopkeeperRegistration = () => {
@@ -85,7 +85,7 @@ const ShopkeeperRegistration = () => {
       const existing = JSON.parse(localStorage.getItem('shopkeeperRegistrations')) || [];
       localStorage.setItem('shopkeeperRegistrations', JSON.stringify([...existing, formToSave]));
 
-      navigate('/Shop-Dashboard'); // or wherever your shop dashboard route is
+      navigate('/Shop-Dashboard'); // redirect after registration
     }
   };
 
@@ -172,7 +172,6 @@ const ShopkeeperRegistration = () => {
 
             {/* Category & Hours */}
             <div className="form-row">
-            
               <div className="form-group">
                 <label>Working Hours *</label>
                 <select name="workingHours" value={formData.workingHours} onChange={handleChange} className={errors.workingHours ? 'error' : ''}>
@@ -219,9 +218,11 @@ const ShopkeeperRegistration = () => {
               Register & Verify Phone
             </button>
 
+            {/* ✅ Fixed Login Link */}
             <div className="form-links">
               <p>
-                Already have an account? <a href="/Login" className="link">Login here</a>
+                Already have an account?{" "}
+                <Link to="/login" className="link">Login here</Link>
               </p>
             </div>
           </form>

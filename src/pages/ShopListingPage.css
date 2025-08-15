@@ -1,6 +1,6 @@
 .shop-page {
   min-height: 100vh;
-  padding: 3rem 1rem;
+  padding: 2rem 1rem;
   background: linear-gradient(to bottom, #f9fafb, #ffffff);
   font-family: 'Inter', sans-serif;
 }
@@ -10,16 +10,21 @@
   margin: 0 auto;
 }
 
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
 .header h1 {
-  font-size: 2.25rem;
+  font-size: 2rem;
   font-weight: 700;
   color: #111827;
-  margin-bottom: 0.5rem;
 }
 
 .header p {
-  font-size: 1.125rem;
+  font-size: 1rem;
   color: #6b7280;
+  margin-top: 0.5rem;
 }
 
 .filter-tabs {
@@ -28,12 +33,13 @@
   background-color: #f3f4f6;
   padding: 0.5rem;
   border-radius: 0.75rem;
-  margin: 2rem 0;
+  margin: 1.5rem auto;
   width: fit-content;
+  flex-wrap: wrap;
 }
 
 .filter-btn {
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 1.2rem;
   border-radius: 0.5rem;
   font-weight: 500;
   font-size: 0.95rem;
@@ -41,22 +47,23 @@
   border: none;
   color: #6b7280;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: background 0.2s ease;
 }
-.filter-btn:hover{
+
+.filter-btn:hover {
   background-color: #8da3d5;
+  color: #fff;
 }
 
 .filter-btn.active {
   background: #e6e5eb;
-  color: #8598c0;
+  color: #4f5d85;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
 }
 
 .provider-grid {
   display: grid;
   gap: 1.5rem;
-  margin-left:10px;
 }
 
 @media (min-width: 768px) {
@@ -81,6 +88,8 @@
 .provider-header {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
   margin-bottom: 1rem;
 }
 
@@ -89,16 +98,12 @@
   align-items: center;
   gap: 0.5rem;
 }
-.provider-title p{
-    margin-left: -10px;
-}
 
 .tag {
   font-size: 0.75rem;
   padding: 0.25rem 0.75rem;
   border-radius: 9999px;
   font-weight: 600;
-  display: inline-block;
 }
 
 .tag.shop {
@@ -109,9 +114,6 @@
 .tag.franchisee {
   background: #ffedd5;
   color: #c2410c;
-}
-.form-label{
-    margin-left:-10px;
 }
 
 .meta {
@@ -152,7 +154,7 @@
 }
 
 .provider-info {
-   display: flex;
+  display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   font-size: 0.875rem;
@@ -161,16 +163,13 @@
 }
 
 .specialties {
-  
-  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 .specialties h4 {
   font-weight: 600;
   color: #111827;
   margin-bottom: 0.5rem;
-   margin-top: 0.7rem;
-   margin-left:-450px;
 }
 
 .specialty-tags {
@@ -191,6 +190,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  gap: 0.75rem;
 }
 
 .price {
@@ -213,7 +215,7 @@
 }
 
 .book-btn.enabled:hover {
-  background: #859bda;
+  background: #1e4ed8;
 }
 
 .book-btn.disabled {
@@ -227,42 +229,24 @@
   padding: 3rem 0;
   color: #6b7280;
 }
-/* ✅ Mobile responsive adjustments */
+
 @media (max-width: 768px) {
   .header h1 {
     font-size: 1.75rem;
-    text-align: center;
-  }
-
-  .header p {
-    font-size: 1rem;
-    text-align: center;
   }
 
   .filter-tabs {
     justify-content: center;
-    width: 100%;
-  }
-
-  .provider-grid {
-    margin-left: 0;
-    grid-template-columns: 1fr;
   }
 
   .provider-header {
     flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .provider-info {
-    flex-direction: column;
-    gap: 0.5rem;
+    align-items: flex-start;
   }
 
   .provider-footer {
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.75rem;
   }
 
   .price {
@@ -277,15 +261,11 @@
 
 @media (max-width: 480px) {
   .shop-page {
-    padding: 2rem 0.5rem;
+    padding: 1.5rem 0.5rem;
   }
 
   .header h1 {
     font-size: 1.5rem;
-  }
-
-  .specialties h4 {
-    font-size: 1rem;
   }
 
   .specialty {

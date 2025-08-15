@@ -144,13 +144,7 @@ const ContactPage = () => {
                 </div>
               </div>
 
-              <div className="info-card">
-                <div className="info-icon">🕒</div>
-                <div className="info-content">
-                  <h3>Business Hours</h3>
-                  <p>Monday - Friday: 8:00 AM - 6:00 PM<br />Saturday: 9:00 AM - 4:00 PM<br />Sunday: Closed</p>
-                </div>
-              </div>
+          
             </div>
 
             <div className="social-links">

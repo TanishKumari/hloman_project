@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './RegistrationPages.css';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 const UserRegistration = () => {
   const navigate = useNavigate();
@@ -48,8 +48,8 @@ const UserRegistration = () => {
       pincode: formData.pincode,
       password: formData.password,
       image: '',
-      shopId: 'shop123', // static shopId for now; can be dynamic
-      status: 'pending'  // for approval by shopkeeper
+      shopId: 'shop123',
+      status: 'pending'
     };
 
     existingRequirements.push(userToSave);
@@ -172,7 +172,7 @@ const UserRegistration = () => {
         </button>
 
         <p className="login-link">
-          Already have an account? <a href="/login">Login here</a>
+          Already have an account? <Link to="/login">Login here</Link>
         </p>
       </form>
     </div>

@@ -1,151 +1,110 @@
-/* Container */
+/* ===== Registration Page Styles ===== */
 .register-container {
-  max-width: 700px;
-  margin: 3rem auto;
-  background-color: #fff;
-  padding: 2.5rem;
-  border-radius: 1rem;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Tahoma, sans-serif;
 }
 
-/* Headings */
 .register-container h2 {
-  font-size: 2rem;
   text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 5px;
   color: #333;
-  margin-bottom: 0.5rem;
 }
 
 .subtitle {
   text-align: center;
+  font-size: 14px;
   color: #666;
-  margin-bottom: 1.5rem;
-  font-size: 1rem;
+  margin-bottom: 25px;
 }
 
-/* Form */
 .register-form {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-/* Form layout */
 .form-group {
-  margin-bottom: 1.25rem;
   display: flex;
   flex-direction: column;
 }
 
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px 14px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #007bff;
+}
+
+.form-group textarea {
+  resize: none;
+}
+
+/* Make all placeholder text uniform */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  font-size: 14px;
+  color: #999;
+}
+
+/* Row layout for side-by-side fields */
 .form-row {
   display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
+  gap: 20px;
 }
 
-/* Labels */
-label {
-  font-weight: 600;
-  font-size: 0.60rem;
-  margin-bottom: 0.4rem;
+.form-row .form-group {
+  flex: 1;
 }
 
-/* Inputs */
-input,
-textarea {
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 0.5rem;
-  font-size: 0.40rem;
-  background-color: #f9f9f9;
-  transition: border 0.3s ease, background 0.3s ease;
-}
-
-input:focus,
-textarea:focus {
-  border-color: #4d7ef5;
-  background-color: #fff;
-  outline: none;
-}
-
-input,:placeholder {
-    font-size: small;
-}
-/* Textarea */
-textarea {
-  resize: vertical;
-  min-height: 80px;
-}
-
-/* Button */
 .submit-btn {
-  width: 100%;
-  padding: 0.9rem;
-  background: linear-gradient(to right, #6a11cb, #2575fc);
-  color: #fff;
-  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  padding: 12px;
   border: none;
-  border-radius: 0.6rem;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
   cursor: pointer;
-  margin-top: 1rem;
-  transition: background 0.3s ease;
+  transition: background-color 0.2s;
 }
 
 .submit-btn:hover {
-  background: linear-gradient(to right, #4e0da8, #1f65e2);
+  background-color: #0056b3;
 }
 
-/* Login link */
 .login-link {
   text-align: center;
-  margin-top: 1rem;
-  font-size: 0.95rem;
+  font-size: 14px;
+  margin-top: 10px;
 }
 
 .login-link a {
-  color: #2575fc;
+  color: #007bff;
   text-decoration: none;
 }
 
 .login-link a:hover {
   text-decoration: underline;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  .form-row {
-    flex-direction: column;
-  }
-
-  .register-container {
-    padding: 2rem 1.2rem;
-  }
-}
-/* Select Dropdown Styling */
-select {
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 0.5rem;
-  background-color: #f9f9f9;
-  font-size: 0.95rem;
-  color: #333;
-  appearance: none;
-  width: 100%;
-  transition: border 0.3s ease, background 0.3s ease;
-}
-
-select:focus {
-  border-color: #4d7ef5;
-  background-color: #fff;
-  outline: none;
-}
-
-/* Optional: Add custom dropdown icon on the right */
-select::-ms-expand {
-  display: none;
-}
-
-select option {
-  background-color: #fff;
-  color: #333;
 }
