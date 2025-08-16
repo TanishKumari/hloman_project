@@ -128,7 +128,7 @@ const PaymentPage = () => {
                     onChange={(e) => setPaymentMethod(e.target.value)}
                   />
                   <Banknote className="methodIcon" />
-                  <span>Cash on Delivery (COD)</span>
+                  <span>Cash Delivery</span>
                 </label>
               </div>
             </div>
