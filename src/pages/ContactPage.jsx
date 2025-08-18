@@ -39,7 +39,7 @@ const ContactPage = () => {
       <div className="container">
         {/* Hero Section */}
         <section className="contact-hero">
-          <h1>Get In Touch</h1>
+          <h1>Get  Touch</h1>
           <p>We'd love to hear from you. Send us a message and we'll respond as soon as possible.
             
           </p>
